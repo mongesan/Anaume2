@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
-from cms.models import Note
 from rest_framework import serializers
+from REST_API.models import Note
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

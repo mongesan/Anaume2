@@ -1,13 +1,11 @@
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-import REST_API
-from REST_API import views as user_views
-from cms import views as cms_views
+from REST_API import views
 
 router = routers.DefaultRouter()
-router.register(r'users', user_views.UserViewSet)
-router.register(r'notes', cms_views.NoteViewSet)
+router.register(r'users', views.UserViewSet)
+router.register(r'notes', views.NoteViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
